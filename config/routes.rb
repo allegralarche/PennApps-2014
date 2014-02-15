@@ -1,8 +1,10 @@
 PawOrClaw::Application.routes.draw do
+  resources :pets
+
   resources :users
 
-  root :to => 'users#new'
-  get "users/new"
+  root :to => 'landing_page#index'
+  get "landing_page/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

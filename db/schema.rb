@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140215081111) do
+ActiveRecord::Schema.define(version: 20140215185700) do
+
+  create_table "pets", force: true do |t|
+    t.string   "name"
+    t.string   "bio"
+    t.decimal  "rating"
+    t.integer  "up"
+    t.integer  "down"
+    t.integer  "user_id"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pets", ["user_id"], name: "index_pets_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "firstName"

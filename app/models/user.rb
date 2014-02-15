@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 	validates :firstName, presence: true
 	validates :lastName, presence: true
 	validates :password, presence: true
-	validates :username, presence: true
+	#validates :username, presence: true
 	#emailFormatValidation = /[a-z\d.-]+@[a-z\d-.]+[.][a-z]+/i
 	#validates :email, format: {with: emailFormatValidation}
 	validates :email, presence: true
